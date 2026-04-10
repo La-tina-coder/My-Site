@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Disney Ride Picker 🎢</title>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #e6f2ff;
+    padding: 30px;
+  }
+
+  h1 {
+    color: #2c3e50;
+  }
+
+  #ride {
+    font-size: 24px;
+    margin: 20px;
+    font-weight: bold;
+  }
+
+  button {
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #005fa3;
+  }
+
+  .counter {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+</style>
+</head>
+
+<body>
+
+<h1>🎢 Disneyland Ride Picker</h1>
+<p>Click the button to choose your next ride!</p>
+
+<div id="ride">Your ride will appear here...</div>
+
+<button onclick="pickRide()">Pick a Ride!</button>
+
+<div class="counter">Times picked: <span id="count">0</span></div>
+
+<p><a href="scratch.html">Back to DisneyLand</a></p>
+
+<script>
+  const rides = [
+    "Space Mountain 🚀",
+    "Splash Mountain 💦",
+    "Haunted Mansion 👻",
+    "Incredicoaster 🎢",
+    "Rise of the Resistance 🌌",
+    "Big Thunder Mountain Railroad 🏜️",
+    "Pirates of the Caribbean 🏴‍☠️",
+    "Indiana Jones Adventure 🗺️",
+    "Matterhorn Bobsleds 🏔️",
+    "Star Tours ✨",
+    "Buzz Lightyear Astro Blasters 🔫",
+    "Peter Pan’s Flight 🧚",
+    "Jungle Cruise 🌴",
+    "It’s a Small World 🌎",
+    "Autopia 🚗",
+    "Soarin’ Around the World 🌍",
+    "Radiator Springs Racers 🚘",
+    "Grizzly River Run 🌊",
+    "Toy Story Midway Mania 🎯",
+    "Guardians of the Galaxy – Mission: BREAKOUT! 💥"
+  ];
+
+  let count = 0;
+
+
+  function pickRide() {
+    const randomIndex = Math.floor(Math.random() * rides.length);
+    document.getElementById("ride").textContent = rides[randomIndex];
+
+    count++;
+    document.getElementById("count").textContent = count;
+  }
+</script>
+
+</body>
+</html>
