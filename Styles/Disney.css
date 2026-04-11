@@ -1,0 +1,48 @@
+body {
+      background-color: #f0f8ff; /* soft custom background color */
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1, h2 {
+      color: #2c3e50;
+    }
+
+    /* Center the lists nicely */
+    ol, ul {
+      display: inline-block; /* shrink to content so it can be centered */
+      text-align: left; /* keep bullets and numbers aligned */
+      margin: 15px auto;
+    }
+
+    li {
+      margin: 5px 0;
+    }
+
+    /* Center images */
+    img {
+      display: block;
+      margin: 20px auto;
+      width: 400px;
+      border-radius: 8px; /* small touch to look nicer */
+    }
+
+    /* Center video */
+    iframe {
+      display: block;
+      margin: 20px auto;
+    }
+
+    a {
+      text-decoration: none;
+      color: #0077cc;
+    }
+
+    a:hover {
+      color: #005fa3;
+    }
+
+    p {
+      margin: 10px 0;
+    }
